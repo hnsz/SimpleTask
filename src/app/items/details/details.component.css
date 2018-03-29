@@ -1,0 +1,14 @@
+div {
+  font-size: 1.4em;
+  font-family: 'Droid Serif', Inconsolata, georgia, serif;
+  background-color: hsla(80, 20%, 80%, .1) ;
+  color: aliceblue;
+  padding:3px;
+  height: 100px;
+}
+a, a:visited{
+
+  color: aliceblue;
+  font-family: georgia, Cantarell, serif;
+}
+

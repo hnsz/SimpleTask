@@ -1,0 +1,32 @@
+
+
+<div [@tableAnimation]="items.length" class="taskList">
+  <table>
+    <thead>
+    <tr>
+      <td colspan="3"><button (click)="toggle()">toggle</button>
+      <button (click)="save()">save</button></td>
+    </tr>
+    <tr>
+      <td colspan="3" id="revision">{{revision.substr(0,2)}}</td>
+    </tr>
+    <tr class="debug">
+      <td colspan="2">debug 1:</td>
+      <td>{{debugOutput1|json}}</td>
+    </tr>
+    <tr class="debug">
+      <td colspan="2">debug 2:</td>
+      <td>{{debugOutput2|json}}</td>
+    </tr>
+    <tr>
+      <th>prio</th>
+      <th>name</th>
+      <th>description</th>
+    </tr>
+    </thead>
+  </table>
+  <router-outlet></router-outlet>
+    <div *ngFor="let task of items; let odd=odd" class="task" [class.even]="!odd" [class.odd]="odd">
+        <app-details [task]="task"></app-details>
+    </div>
+</div>
